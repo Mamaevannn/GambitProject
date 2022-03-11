@@ -7,23 +7,74 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC98C34127DBD40E001EA4A4 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC98C33D27DBD401001EA4A4 /* SDWebImage.framework */; };
+		AC98C34227DBD40E001EA4A4 /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC98C33D27DBD401001EA4A4 /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AC98C34627DBD485001EA4A4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC98C34527DBD485001EA4A4 /* NetworkService.swift */; };
+		AC98C34927DBDA68001EA4A4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC98C34827DBDA68001EA4A4 /* NetworkError.swift */; };
 		ACD11C9B27DB1B5200521E05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD11C9A27DB1B5200521E05 /* AppDelegate.swift */; };
 		ACD11C9D27DB1B5200521E05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD11C9C27DB1B5200521E05 /* SceneDelegate.swift */; };
-		ACD11C9F27DB1B5200521E05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD11C9E27DB1B5200521E05 /* ViewController.swift */; };
 		ACD11CA227DB1B5200521E05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACD11CA027DB1B5200521E05 /* Main.storyboard */; };
 		ACD11CA427DB1B5400521E05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACD11CA327DB1B5400521E05 /* Assets.xcassets */; };
 		ACD11CA727DB1B5400521E05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACD11CA527DB1B5400521E05 /* LaunchScreen.storyboard */; };
+		ACD11CAF27DB1C8200521E05 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD11CAE27DB1C8200521E05 /* Model.swift */; };
+		ACD11CB327DB312C00521E05 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD11CB227DB312C00521E05 /* Presenter.swift */; };
+		ACD11CB627DB336A00521E05 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD11CB527DB336A00521E05 /* TableViewController.swift */; };
+		ACD11CB827DB912000521E05 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD11CB727DB912000521E05 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AC98C33A27DBD401001EA4A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC98C33327DBD401001EA4A4 /* SDWebImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 53761325155AD0D5005750A4;
+			remoteInfo = "SDWebImage static";
+		};
+		AC98C33C27DBD401001EA4A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC98C33327DBD401001EA4A4 /* SDWebImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4A2CADFF1AB4BB5300B6BC39;
+			remoteInfo = SDWebImage;
+		};
+		AC98C33E27DBD401001EA4A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC98C33327DBD401001EA4A4 /* SDWebImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 80B6DFEE2142B71600BCB334;
+			remoteInfo = SDWebImageMapKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AC98C34327DBD40E001EA4A4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AC98C34227DBD40E001EA4A4 /* SDWebImage.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		AC98C33327DBD401001EA4A4 /* SDWebImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDWebImage.xcodeproj; path = "../peretz-main/SDWebImage-master/SDWebImage.xcodeproj"; sourceTree = "<group>"; };
+		AC98C34527DBD485001EA4A4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		AC98C34827DBDA68001EA4A4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		ACD11C9727DB1B5200521E05 /* GambitProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GambitProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD11C9A27DB1B5200521E05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACD11C9C27DB1B5200521E05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ACD11C9E27DB1B5200521E05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ACD11CA127DB1B5200521E05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACD11CA327DB1B5400521E05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACD11CA627DB1B5400521E05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACD11CA827DB1B5400521E05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACD11CAE27DB1C8200521E05 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		ACD11CB227DB312C00521E05 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		ACD11CB527DB336A00521E05 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		ACD11CB727DB912000521E05 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +82,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC98C34127DBD40E001EA4A4 /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC98C33427DBD401001EA4A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC98C33B27DBD401001EA4A4 /* libSDWebImage.a */,
+				AC98C33D27DBD401001EA4A4 /* SDWebImage.framework */,
+				AC98C33F27DBD401001EA4A4 /* SDWebImageMapKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC98C34027DBD40E001EA4A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC98C34727DBD48A001EA4A4 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				AC98C34527DBD485001EA4A4 /* NetworkService.swift */,
+				AC98C34827DBDA68001EA4A4 /* NetworkError.swift */,
+			);
+			name = NetworkService;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		ACD11C8E27DB1B5200521E05 = {
 			isa = PBXGroup;
 			children = (
+				AC98C33327DBD401001EA4A4 /* SDWebImage.xcodeproj */,
 				ACD11C9927DB1B5200521E05 /* GambitProject */,
 				ACD11C9827DB1B5200521E05 /* Products */,
+				AC98C34027DBD40E001EA4A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +139,41 @@
 			children = (
 				ACD11C9A27DB1B5200521E05 /* AppDelegate.swift */,
 				ACD11C9C27DB1B5200521E05 /* SceneDelegate.swift */,
-				ACD11C9E27DB1B5200521E05 /* ViewController.swift */,
-				ACD11CA027DB1B5200521E05 /* Main.storyboard */,
+				ACD11CB027DB30FC00521E05 /* Model */,
+				ACD11CB127DB311500521E05 /* View */,
+				ACD11CB427DB313200521E05 /* Presenter */,
 				ACD11CA327DB1B5400521E05 /* Assets.xcassets */,
 				ACD11CA527DB1B5400521E05 /* LaunchScreen.storyboard */,
 				ACD11CA827DB1B5400521E05 /* Info.plist */,
 			);
 			path = GambitProject;
+			sourceTree = "<group>";
+		};
+		ACD11CB027DB30FC00521E05 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACD11CAE27DB1C8200521E05 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ACD11CB127DB311500521E05 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACD11CA027DB1B5200521E05 /* Main.storyboard */,
+				ACD11CB727DB912000521E05 /* TableViewCell.swift */,
+				ACD11CB527DB336A00521E05 /* TableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACD11CB427DB313200521E05 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				ACD11CB227DB312C00521E05 /* Presenter.swift */,
+				AC98C34727DBD48A001EA4A4 /* NetworkService */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +186,7 @@
 				ACD11C9327DB1B5200521E05 /* Sources */,
 				ACD11C9427DB1B5200521E05 /* Frameworks */,
 				ACD11C9527DB1B5200521E05 /* Resources */,
+				AC98C34327DBD40E001EA4A4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -113,12 +223,42 @@
 			mainGroup = ACD11C8E27DB1B5200521E05;
 			productRefGroup = ACD11C9827DB1B5200521E05 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AC98C33427DBD401001EA4A4 /* Products */;
+					ProjectRef = AC98C33327DBD401001EA4A4 /* SDWebImage.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				ACD11C9627DB1B5200521E05 /* GambitProject */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		AC98C33B27DBD401001EA4A4 /* libSDWebImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSDWebImage.a;
+			remoteRef = AC98C33A27DBD401001EA4A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC98C33D27DBD401001EA4A4 /* SDWebImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SDWebImage.framework;
+			remoteRef = AC98C33C27DBD401001EA4A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC98C33F27DBD401001EA4A4 /* SDWebImageMapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SDWebImageMapKit.framework;
+			remoteRef = AC98C33E27DBD401001EA4A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		ACD11C9527DB1B5200521E05 /* Resources */ = {
@@ -138,9 +278,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACD11C9F27DB1B5200521E05 /* ViewController.swift in Sources */,
+				ACD11CB627DB336A00521E05 /* TableViewController.swift in Sources */,
+				AC98C34927DBDA68001EA4A4 /* NetworkError.swift in Sources */,
 				ACD11C9B27DB1B5200521E05 /* AppDelegate.swift in Sources */,
 				ACD11C9D27DB1B5200521E05 /* SceneDelegate.swift in Sources */,
+				ACD11CB827DB912000521E05 /* TableViewCell.swift in Sources */,
+				ACD11CAF27DB1C8200521E05 /* Model.swift in Sources */,
+				ACD11CB327DB312C00521E05 /* Presenter.swift in Sources */,
+				AC98C34627DBD485001EA4A4 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
