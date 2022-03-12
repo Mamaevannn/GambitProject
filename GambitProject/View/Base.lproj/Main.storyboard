@@ -130,6 +130,7 @@
                                     <outlet property="imageMenu" destination="J5B-W2-q5N" id="GHa-Sf-7lW"/>
                                     <outlet property="minusButton" destination="Tb3-Fo-EyH" id="1WU-xV-ZAR"/>
                                     <outlet property="nameLabel" destination="UBv-S4-2yu" id="5Pw-jO-hOf"/>
+                                    <outlet property="plusButton" destination="nch-d1-mzD" id="cTO-GE-MFJ"/>
                                     <outlet property="priceLabel" destination="RZF-k8-hML" id="jy9-g5-GNp"/>
                                 </connections>
                             </tableViewCell>

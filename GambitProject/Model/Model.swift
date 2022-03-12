@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Menu {
+class Menu {
     var id: Int
     var name: String
     var image: String
     var price: Int
     var oldPrice: Int
     var description: String
-    //    var isFavorite: Bool
+//    var isFavorite: Bool?
     struct nutritionFacts {
         var weight: Int
         var calories: Int
@@ -35,8 +35,8 @@ struct Menu {
             self.fat = fat
             self.carbohydrates = carbohydrates
             
+            
         }
-        //    var modificator: Bool
     }
     
     init?(dict: [String: AnyObject]) {
@@ -46,6 +46,8 @@ struct Menu {
               let price = dict["price"] as? Int,
               let oldPrice = dict["oldPrice"] as? Int,
               let description = dict["description"] as? String
+//              let isFavorite = dict["null"] as? Bool
+                
                 
         else {return nil}
         
@@ -55,6 +57,9 @@ struct Menu {
         self.price = price
         self.oldPrice = oldPrice
         self.description = description
+//        self.isFavorite = isFavorite
     }
+    
 }
+
 
