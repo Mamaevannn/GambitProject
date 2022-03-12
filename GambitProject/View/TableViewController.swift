@@ -88,7 +88,7 @@ class TableViewController: UITableViewController {
         let favoriteAction = UIContextualAction(style: .normal, title: "") {(_, _, completionHandler) in
             completionHandler(true)
         }
-        favoriteAction.image = #imageLiteral(resourceName: "isNotFavorite")
+        favoriteAction.image = #imageLiteral(resourceName: "isFavorite")
         favoriteAction.backgroundColor = #colorLiteral(red: 0.918249011, green: 0.9182489514, blue: 0.9182489514, alpha: 1)
         return UISwipeActionsConfiguration(actions: [favoriteAction])
     }

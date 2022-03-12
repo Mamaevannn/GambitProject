@@ -72,6 +72,9 @@
                                                         </attributedString>
                                                         <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="minusOne:" destination="fIQ-ht-717" eventType="touchUpInside" id="kGU-TC-Skt"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTv-kO-Tm9">
                                                     <rect key="frame" x="45" y="0.0" width="24" height="32"/>
@@ -100,33 +103,65 @@
                                                         </attributedString>
                                                         <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="addOne:" destination="fIQ-ht-717" eventType="touchUpInside" id="YPJ-WM-5bN"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Op4-C9-Hcc">
+                                            <rect key="frame" x="268" y="79" width="114" height="32"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain">
+                                                <backgroundConfiguration key="background" cornerRadius="8">
+                                                    <color key="backgroundColor" red="0.89019607840000003" green="0.070588235289999995" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </backgroundConfiguration>
+                                                <attributedString key="attributedTitle">
+                                                    <fragment content="В корзину">
+                                                        <attributes>
+                                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </buttonConfiguration>
+                                            <connections>
+                                                <action selector="addToBasket:" destination="fIQ-ht-717" eventType="touchUpInside" id="X9k-I3-JGW"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     <constraints>
+                                        <constraint firstAttribute="bottomMargin" relation="lessThanOrEqual" secondItem="Op4-C9-Hcc" secondAttribute="bottom" constant="37" id="0dH-Vd-MyF"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="RZF-k8-hML" secondAttribute="bottom" constant="6" id="19X-cf-xN4"/>
+                                        <constraint firstItem="Op4-C9-Hcc" firstAttribute="width" secondItem="ks9-qY-Ncb" secondAttribute="width" id="20H-bh-fTZ"/>
                                         <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="ks9-qY-Ncb" secondAttribute="bottom" constant="37" id="5sU-T8-esY"/>
                                         <constraint firstItem="UBv-S4-2yu" firstAttribute="top" relation="lessThanOrEqual" secondItem="EUy-d5-HhI" secondAttribute="top" constant="38" id="6g6-f6-tk4"/>
                                         <constraint firstItem="UBv-S4-2yu" firstAttribute="leading" secondItem="J5B-W2-q5N" secondAttribute="trailing" constant="14" id="800-Ff-usv"/>
                                         <constraint firstItem="RZF-k8-hML" firstAttribute="top" secondItem="UBv-S4-2yu" secondAttribute="bottom" constant="20" id="AMK-bx-hFk"/>
+                                        <constraint firstItem="Op4-C9-Hcc" firstAttribute="top" secondItem="UBv-S4-2yu" secondAttribute="bottom" constant="20" id="D9s-UQ-5fc"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ks9-qY-Ncb" secondAttribute="trailing" constant="12" id="F8Q-8y-JEY"/>
+                                        <constraint firstItem="Op4-C9-Hcc" firstAttribute="leading" relation="lessThanOrEqual" secondItem="RZF-k8-hML" secondAttribute="trailing" constant="23" id="GEb-DN-emE"/>
                                         <constraint firstItem="ks9-qY-Ncb" firstAttribute="top" secondItem="UBv-S4-2yu" secondAttribute="bottom" constant="20" id="Jmt-Pc-GoL"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ks9-qY-Ncb" secondAttribute="bottom" constant="6" id="M9C-aL-5Cs"/>
                                         <constraint firstItem="ks9-qY-Ncb" firstAttribute="leading" relation="lessThanOrEqual" secondItem="RZF-k8-hML" secondAttribute="trailing" constant="23" id="O89-3I-IJh"/>
+                                        <constraint firstItem="Op4-C9-Hcc" firstAttribute="height" secondItem="ks9-qY-Ncb" secondAttribute="height" id="OAq-XZ-ShP"/>
                                         <constraint firstItem="RZF-k8-hML" firstAttribute="leading" secondItem="J5B-W2-q5N" secondAttribute="trailing" constant="14" id="VjI-GA-BML"/>
                                         <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="RZF-k8-hML" secondAttribute="bottom" constant="37" id="XIF-kY-Fz4"/>
                                         <constraint firstItem="UBv-S4-2yu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="EUy-d5-HhI" secondAttribute="top" constant="6" id="Xme-Xb-O7f"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="UBv-S4-2yu" secondAttribute="trailing" constant="12" id="aNE-Lv-nzf"/>
                                         <constraint firstItem="J5B-W2-q5N" firstAttribute="leading" secondItem="EUy-d5-HhI" secondAttribute="leading" constant="20" id="oEt-Uo-5s9"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Op4-C9-Hcc" secondAttribute="bottom" constant="6" id="qgq-ZD-X63"/>
                                         <constraint firstAttribute="bottom" secondItem="J5B-W2-q5N" secondAttribute="bottom" id="sWO-ij-p5k"/>
                                         <constraint firstItem="J5B-W2-q5N" firstAttribute="top" secondItem="EUy-d5-HhI" secondAttribute="top" id="xEw-R4-Fcc"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Op4-C9-Hcc" secondAttribute="trailing" constant="12" id="xR3-CF-IpT"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="amountLabel" destination="cTv-kO-Tm9" id="BGU-cX-JF0"/>
+                                    <outlet property="basketButton" destination="Op4-C9-Hcc" id="ynY-md-UyY"/>
                                     <outlet property="imageMenu" destination="J5B-W2-q5N" id="GHa-Sf-7lW"/>
                                     <outlet property="minusButton" destination="Tb3-Fo-EyH" id="1WU-xV-ZAR"/>
                                     <outlet property="nameLabel" destination="UBv-S4-2yu" id="5Pw-jO-hOf"/>
