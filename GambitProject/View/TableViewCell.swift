@@ -60,16 +60,15 @@ class TableViewCell: UITableViewCell {
     }
     
     @IBAction func addToBasket(_ sender: UIButton) {
-        showHide(true)
-//        amount = 1
         plusMinus(true)
+        saveCount(amount)
+        showHide(true)
     }
+    
     @IBAction func addOne(_ sender: UIButton) {
         plusMinus(true)
         saveCount(amount)
-        if amount == 0 {
-            showHide(false)
-        }
+
     }
     @IBAction func minusOne(_ sender: UIButton) {
     plusMinus(false)
