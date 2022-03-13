@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwipeCellKit
 
 class TableViewController: UITableViewController {
 
@@ -23,23 +24,7 @@ class TableViewController: UITableViewController {
             self.menuPosition = response.menuPosition
             self.tableView.reloadData()
         }
-//        let notFavorite = UILabel()
-//        notFavorite.frame = CGRect(x: 0, y: 0, width: 22, height: 20)
-//        notFavorite.backgroundColor = .white
-//        notFavorite.layer.borderWidth = 1.5
-//        notFavorite.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-//        let parent = self.view!
-//        parent.addSubview(notFavorite)
-//        notFavorite.translatesAutoresizingMaskIntoConstraints = false
-//
-//
-//        let favorite = UILabel()
-//        favorite.frame = CGRect(x: 0, y: 0, width: 22, height: 20)
-//        favorite.backgroundColor = .white
-//        favorite.layer.backgroundColor = UIColor(red: 0.892, green: 0.071, blue: 0.563, alpha: 1).cgColor
-//        let parentF = self.view!
-//        parentF.addSubview(favorite)
-//        favorite.translatesAutoresizingMaskIntoConstraints = false
+
     }
 
     // кастомим navigationBar
@@ -84,13 +69,22 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-      
-        let favoriteAction = UIContextualAction(style: .normal, title: "") {(_, _, completionHandler) in
+        let favorite = setFavorite(at: indexPath)
+        
+        return UISwipeActionsConfiguration(actions: [favorite])
+    }
+    
+    func setFavorite(at indexPath: IndexPath) -> UIContextualAction {
+        let object = menuPosition[indexPath.row]
+        
+        let favoriteAction = UIContextualAction(style: .normal, title: "") {(action, view, completionHandler) in
+            object.isFavorite = !(object.isFavorite ?? false)
+            self.menuPosition[indexPath.row] = object
             completionHandler(true)
         }
-        favoriteAction.image = #imageLiteral(resourceName: "isFavorite")
+        favoriteAction.image = object.isFavorite ?? false  ? #imageLiteral(resourceName: "isFavorite") : #imageLiteral(resourceName: "isNotFavorite")
         favoriteAction.backgroundColor = #colorLiteral(red: 0.918249011, green: 0.9182489514, blue: 0.9182489514, alpha: 1)
-        return UISwipeActionsConfiguration(actions: [favoriteAction])
+        return favoriteAction
     }
                 
     

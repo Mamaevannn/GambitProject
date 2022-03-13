@@ -14,7 +14,7 @@ class Menu {
     var price: Int
     var oldPrice: Int
     var description: String
-//    var isFavorite: Bool?
+    var isFavorite: Bool?
     struct nutritionFacts {
         var weight: Int
         var calories: Int
@@ -57,7 +57,14 @@ class Menu {
         self.price = price
         self.oldPrice = oldPrice
         self.description = description
-//        self.isFavorite = isFavorite
+    }
+    
+    func setFavorite() -> Bool {
+        if isFavorite == true {
+            return true
+        } else {
+            return false
+        }
     }
     
 }
