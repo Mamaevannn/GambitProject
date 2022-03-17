@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Menu {
     var id: Int
@@ -34,8 +35,6 @@ class Menu {
             self.protein = protein
             self.fat = fat
             self.carbohydrates = carbohydrates
-            
-            
         }
     }
     
@@ -46,8 +45,6 @@ class Menu {
               let price = dict["price"] as? Int,
               let oldPrice = dict["oldPrice"] as? Int,
               let description = dict["description"] as? String
-//              let isFavorite = dict["null"] as? Bool
-                
                 
         else {return nil}
         
@@ -59,14 +56,15 @@ class Menu {
         self.description = description
     }
     
-    func setFavorite() -> Bool {
-        if isFavorite == true {
-            return true
-        } else {
-            return false
-        }
+    func saveCount() {
+        UserDefaults.standard.setValue(isFavorite, forKey: "favAction")
+        isFavorite = UserDefaults.standard.bool(forKey: "favAction")
     }
     
+    static func generateData() {
+        let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+        appDelegate.saveContext()
+    }
 }
 
 

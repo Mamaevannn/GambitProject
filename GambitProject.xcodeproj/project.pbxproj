@@ -11,15 +11,12 @@
 		AC98C34227DBD40E001EA4A4 /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC98C33D27DBD401001EA4A4 /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AC98C34627DBD485001EA4A4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC98C34527DBD485001EA4A4 /* NetworkService.swift */; };
 		AC98C34927DBDA68001EA4A4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC98C34827DBDA68001EA4A4 /* NetworkError.swift */; };
-		AC98C35727DE28FC001EA4A4 /* SwipeCellKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC98C35627DE28F2001EA4A4 /* SwipeCellKit.framework */; };
-		AC98C35827DE28FD001EA4A4 /* SwipeCellKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC98C35627DE28F2001EA4A4 /* SwipeCellKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ACD11C9B27DB1B5200521E05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD11C9A27DB1B5200521E05 /* AppDelegate.swift */; };
 		ACD11C9D27DB1B5200521E05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD11C9C27DB1B5200521E05 /* SceneDelegate.swift */; };
 		ACD11CA227DB1B5200521E05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACD11CA027DB1B5200521E05 /* Main.storyboard */; };
 		ACD11CA427DB1B5400521E05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACD11CA327DB1B5400521E05 /* Assets.xcassets */; };
 		ACD11CA727DB1B5400521E05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACD11CA527DB1B5400521E05 /* LaunchScreen.storyboard */; };
 		ACD11CAF27DB1C8200521E05 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD11CAE27DB1C8200521E05 /* Menu.swift */; };
-		ACD11CB327DB312C00521E05 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD11CB227DB312C00521E05 /* Presenter.swift */; };
 		ACD11CB627DB336A00521E05 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD11CB527DB336A00521E05 /* TableViewController.swift */; };
 		ACD11CB827DB912000521E05 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD11CB727DB912000521E05 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -46,13 +43,6 @@
 			remoteGlobalIDString = 80B6DFEE2142B71600BCB334;
 			remoteInfo = SDWebImageMapKit;
 		};
-		AC98C35527DE28F2001EA4A4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AC98C35127DE28F2001EA4A4 /* SwipeCellKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3F234AC31E44A7A400E22A38;
-			remoteInfo = SwipeCellKit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,7 +52,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AC98C35827DE28FD001EA4A4 /* SwipeCellKit.framework in Embed Frameworks */,
 				AC98C34227DBD40E001EA4A4 /* SDWebImage.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -74,7 +63,6 @@
 		AC98C33327DBD401001EA4A4 /* SDWebImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDWebImage.xcodeproj; path = "../peretz-main/SDWebImage-master/SDWebImage.xcodeproj"; sourceTree = "<group>"; };
 		AC98C34527DBD485001EA4A4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		AC98C34827DBDA68001EA4A4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		AC98C35127DE28F2001EA4A4 /* SwipeCellKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwipeCellKit.xcodeproj; path = "../../../Downloads/SwipeCellKit-develop/SwipeCellKit.xcodeproj"; sourceTree = "<group>"; };
 		ACD11C9727DB1B5200521E05 /* GambitProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GambitProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD11C9A27DB1B5200521E05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACD11C9C27DB1B5200521E05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +71,6 @@
 		ACD11CA627DB1B5400521E05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACD11CA827DB1B5400521E05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACD11CAE27DB1C8200521E05 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
-		ACD11CB227DB312C00521E05 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		ACD11CB527DB336A00521E05 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		ACD11CB727DB912000521E05 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC98C35727DE28FC001EA4A4 /* SwipeCellKit.framework in Frameworks */,
 				AC98C34127DBD40E001EA4A4 /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,13 +97,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AC98C34027DBD40E001EA4A4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		AC98C34727DBD48A001EA4A4 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,22 +107,12 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		AC98C35227DE28F2001EA4A4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AC98C35627DE28F2001EA4A4 /* SwipeCellKit.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		ACD11C8E27DB1B5200521E05 = {
 			isa = PBXGroup;
 			children = (
 				AC98C33327DBD401001EA4A4 /* SDWebImage.xcodeproj */,
-				AC98C35127DE28F2001EA4A4 /* SwipeCellKit.xcodeproj */,
 				ACD11C9927DB1B5200521E05 /* GambitProject */,
 				ACD11C9827DB1B5200521E05 /* Products */,
-				AC98C34027DBD40E001EA4A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,7 +131,7 @@
 				ACD11C9C27DB1B5200521E05 /* SceneDelegate.swift */,
 				ACD11CB027DB30FC00521E05 /* Model */,
 				ACD11CB127DB311500521E05 /* View */,
-				ACD11CB427DB313200521E05 /* Presenter */,
+				ACD11CB427DB313200521E05 /* Controller */,
 				ACD11CA327DB1B5400521E05 /* Assets.xcassets */,
 				ACD11CA527DB1B5400521E05 /* LaunchScreen.storyboard */,
 				ACD11CA827DB1B5400521E05 /* Info.plist */,
@@ -182,19 +151,18 @@
 			isa = PBXGroup;
 			children = (
 				ACD11CA027DB1B5200521E05 /* Main.storyboard */,
-				ACD11CB727DB912000521E05 /* TableViewCell.swift */,
-				ACD11CB527DB336A00521E05 /* TableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		ACD11CB427DB313200521E05 /* Presenter */ = {
+		ACD11CB427DB313200521E05 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				ACD11CB227DB312C00521E05 /* Presenter.swift */,
+				ACD11CB727DB912000521E05 /* TableViewCell.swift */,
+				ACD11CB527DB336A00521E05 /* TableViewController.swift */,
 				AC98C34727DBD48A001EA4A4 /* NetworkService */,
 			);
-			path = Presenter;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,10 +217,6 @@
 					ProductGroup = AC98C33427DBD401001EA4A4 /* Products */;
 					ProjectRef = AC98C33327DBD401001EA4A4 /* SDWebImage.xcodeproj */;
 				},
-				{
-					ProductGroup = AC98C35227DE28F2001EA4A4 /* Products */;
-					ProjectRef = AC98C35127DE28F2001EA4A4 /* SwipeCellKit.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -283,13 +247,6 @@
 			remoteRef = AC98C33E27DBD401001EA4A4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		AC98C35627DE28F2001EA4A4 /* SwipeCellKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SwipeCellKit.framework;
-			remoteRef = AC98C35527DE28F2001EA4A4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -316,7 +273,6 @@
 				ACD11C9D27DB1B5200521E05 /* SceneDelegate.swift in Sources */,
 				ACD11CB827DB912000521E05 /* TableViewCell.swift in Sources */,
 				ACD11CAF27DB1C8200521E05 /* Menu.swift in Sources */,
-				ACD11CB327DB312C00521E05 /* Presenter.swift in Sources */,
 				AC98C34627DBD485001EA4A4 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,44 +9,40 @@ import UIKit
 import SwipeCellKit
 
 class TableViewController: UITableViewController {
-
     
     var menuPosition = [Menu]()
+    let isFavKey = "isFavKey"
     
+//    func saveFav(_ isFav: Bool) {
+//        UserDefaults.standard.set(isFav, forKey: isFavKey)
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        tableView.delegate = self
-//        tableView.dataSource = self
         addImageToNavBar()
         MenuNetworkService.getMenu { (response) in
             self.menuPosition = response.menuPosition
             self.tableView.reloadData()
         }
-
     }
-
     // кастомим navigationBar
+    
     func addImageToNavBar() {
         if let navController = navigationController {
             let imageLogo = #imageLiteral(resourceName: "image")
             let widthNavBar = navController.navigationBar.frame.width
             let heigthNavBar = navController.navigationBar.frame.height
-            
             let widthForView = widthNavBar * 0.4
-            
             let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: widthForView, height: heigthNavBar))
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: widthForView, height: heigthNavBar))
             imageView.image = imageLogo
             imageView.contentMode = .scaleAspectFit
             logoContainer.addSubview(imageView)
-            
             navigationItem.titleView = logoContainer
 
         }
     }
-    
     
     // MARK: - Table view data source
     
@@ -68,10 +64,16 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
+//        let object = menuPosition[indexPath.row]
         let favorite = setFavorite(at: indexPath)
+//        if let favAction = UserDefaults.standard.object(forKey: "favAction") {
+//        UserDefaults.standard.setValue(object.isFavorite, forKey: "favAction")
+
+//        object.isFavorite = UserDefaults.standard.bool(forKey: "favAction")
+//        saveFav(object.isFavorite ?? false)
         
         return UISwipeActionsConfiguration(actions: [favorite])
+        
     }
     
     func setFavorite(at indexPath: IndexPath) -> UIContextualAction {
@@ -84,10 +86,11 @@ class TableViewController: UITableViewController {
         }
         favoriteAction.image = object.isFavorite ?? false  ? #imageLiteral(resourceName: "isFavorite") : #imageLiteral(resourceName: "isNotFavorite")
         favoriteAction.backgroundColor = #colorLiteral(red: 0.918249011, green: 0.9182489514, blue: 0.9182489514, alpha: 1)
+        
         return favoriteAction
-    }
-                
     
+    }
+    
+        
 }
-
 

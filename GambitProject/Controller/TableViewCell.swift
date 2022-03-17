@@ -9,7 +9,7 @@ import UIKit
 import SDWebImage
 
 class TableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var imageMenu: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -24,15 +24,21 @@ class TableViewCell: UITableViewCell {
     
     func showHide(_ action: Bool){
       basketButton.isHidden = action
-     
   }
-    func saveCount(_ countFood: Int) {
+    
+    func saveCount( _ countFood: Int) {
+//        let ifIsFav = requestData(id: id)
+//        let isFav = ifIsFav["isFavorite"] ?? 0
+//        let item = ["count": countFood, "isFavorite": isFav]
         amountLabel.text = String(countFood)
         defaults.set(countFood, forKey: String(id))
     }
     
-    func configure(with menu: Menu) {
+//    func requestData(id: String) -> Dictionary<String, Int>{
+//        let response = defaults.object(forKey: id) as?  Dictionary<String, Int> ?? ["count": 0, "isFavorite": 0]
         
+//    }
+    func configure(with menu: Menu) {
         self.nameLabel.text = menu.name
         self.priceLabel.text = "\(menu.price) ₽"
         self.id = menu.id
@@ -46,9 +52,8 @@ class TableViewCell: UITableViewCell {
             self.amountLabel.text = String(defaults.integer(forKey: String(id)))
             amount = defaults.integer(forKey: String(id))
             showHide(true)
-    
         }
-  
+
     }
     
     func plusMinus(_ plusMinus: Bool) {
@@ -68,8 +73,8 @@ class TableViewCell: UITableViewCell {
     @IBAction func addOne(_ sender: UIButton) {
         plusMinus(true)
         saveCount(amount)
-
     }
+    
     @IBAction func minusOne(_ sender: UIButton) {
     plusMinus(false)
     saveCount(amount)
